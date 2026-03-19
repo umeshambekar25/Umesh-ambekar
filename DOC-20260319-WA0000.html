@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Umesh Ambekar· professional portfolio (dark)</title>
+    <style>
+                * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #0a0c0f;  
+            font-family: 'Inter', 'Segoe UI', Roboto, system-ui, sans-serif;
+            line-height: 1.5;
+            color: #eaeef2;
+            padding: 2rem 1rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* main card — dark, professional, subtle */
+        .portfolio-card {
+            max-width: 1200px;
+            width: 100%;
+            background: #14181c;       /* deep charcoal background */
+            border-radius: 2rem;
+            box-shadow: 0 30px 50px -15px rgba(0,0,0,0.8), 0 0 0 1px rgba(66, 153, 225, 0.2) inset;
+            overflow: hidden;
+            border: 1px solid #2a343d;
+        }
+
+        /* ---------- HEADER (elegant dark gradient) ---------- */
+        .header {
+            background: linear-gradient(145deg, #10161c 0%, #1b262f 100%);
+            padding: 2.8rem 3rem 2rem 3rem;
+            color: #ffffff;
+            border-bottom: 1px solid #2d3a46;
+        }
+
+        .name-title h1 {
+            font-size: 3.2rem;
+            font-weight: 600;
+            letter-spacing: -0.02em;
+            line-height: 1.1;
+            background: linear-gradient(to right, #ffffff, #c0d0e0);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 0.5rem;
+        }
+
+        .badge {
+            display: inline-block;
+            background: #1f2e3a;
+            color: #bdd3e8;
+            padding: 0.5rem 1.6rem;
+            border-radius: 40px;
+            font-size: 1.2rem;
+            font-weight: 500;
+            border: 1px solid #3e5568;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+            backdrop-filter: blur(2px);
+        }
+
+        .header-row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: flex-end;
+            margin-top: 2rem;
+            gap: 2rem;
+        }
+
+        .institution {
+            font-size: 1.3rem;
+            opacity: 0.9;
+        }
+
+        .institution span:first-child {
+            font-weight: 300;
+            font-size: 1rem;
+            color: #96b2c9;
+            display: block;
+        }
+
+        .institution span:last-child {
+            font-weight: 600;
+            font-size: 1.7rem;
+            color: #d4e4f5;
+        }
+
+        .contact-badge {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.2rem;
+            background: #1d2a33c0;
+            padding: 1rem 2rem;
+            border-radius: 60px;
+            border: 1px solid #3d5263;
+            backdrop-filter: blur(4px);
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            font-size: 1rem;
+            color: #d6e5f5;
+        }
+
+        .contact-item i {
+            font-style: normal;
+            font-weight: 400;
+            opacity: 0.8;
+        }
+
+        .contact-item a {
+            color: #ffffff;
+            text-decoration: none;
+            border-bottom: 1px dotted #4f7a9e;
+        }
+
+        .contact-item a:hover {
+            border-bottom: 1px solid #80b5dc;
+        }
+
+        /* ---------- TWO COLUMNS (dark & elegant) ---------- */
+        .columns {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .sidebar {
+            flex: 1 1 280px;
+            background: #11171d;        /* slightly darker side */
+            padding: 2.5rem 2rem;
+            border-right: 1px solid #28333e;
+        }
+
+        .main-content {
+            flex: 3 1 500px;
+            background: #141c23;        /* rich dark blue-gray */
+            padding: 2.5rem 3rem;
+        }
+
+        /* ribbon for fresher (dark but stands out) */
+        .fresher-ribbon {
+            background: #1e2e3c;
+            border-radius: 100px;
+            padding: 0.7rem 1.6rem;
+            display: inline-block;
+            font-weight: 500;
+            color: #cbe4ff;
+            border: 1px solid #3f607b;
+            margin-bottom: 2rem;
+            font-size: 1rem;
+            letter-spacing: 0.3px;
+            box-shadow: 0 2px 8px black;
+        }
+
+        /* section headings with refined underline */
+        .section-title {
+            font-size: 1.6rem;
+            font-weight: 600;
+            letter-spacing: -0.02em;
+            border-bottom: 2px solid #2d4355;
+            padding-bottom: 0.7rem;
+            margin: 2.2rem 0 1.5rem 0;
+            color: #e0edfa;
+            display: flex;
+            align-items: center;
+        }
+
+        .section-title::before {
+            content: "▍";
+            font-size: 1.8rem;
+            margin-right: 10px;
+            color: #5688b7;
+            opacity: 1;
+        }
+
+        /* info list (professional) */
+        .info-list {
+            list-style: none;
+        }
+
+        .info-list li {
+            display: flex;
+            align-items: baseline;
+            padding: 0.9rem 0;
+            border-bottom: 1px dashed #314553;
+        }
+
+        .info-list li strong {
+            width: 100px;
+            font-weight: 600;
+            color: #acc7e3;
+        }
+
+        .info-list li span, .info-list li a {
+            color: #daeafc;
+            text-decoration: none;
+        }
+
+        .info-list li a:hover {
+            text-decoration: underline;
+            color: #9ac4f0;
+        }
+
+        /* education card (dark elevated) */
+        .edu-card {
+            background: #1a2631;
+            border-radius: 24px;
+            padding: 1.5rem 2rem;
+            margin: 1.5rem 0 1rem;
+            border-left: 6px solid #3a74a6;
+            box-shadow: 0 10px 15px -8px black;
+        }
+
+        .edu-card h3 {
+            font-size: 1.7rem;
+            font-weight: 600;
+            color: #d1e6ff;
+        }
+
+        .edu-card .college {
+            font-size: 1.3rem;
+            font-weight: 500;
+            margin: 0.4rem 0 0.5rem;
+            color: #b0cbe5;
+        }
+
+        .edu-card .year {
+            font-size: 1rem;
+            background: #263b4b;
+            padding: 0.3rem 1.4rem;
+            border-radius: 30px;
+            display: inline-block;
+            color: #cde1f2;
+            border: 1px solid #3e5f78;
+        }
+
+        /* empty state for projects (still dark) */
+        .empty-state {
+            background: #1b2630;
+            border: 2px dashed #3f5b72;
+            border-radius: 30px;
+            padding: 2.2rem 1.8rem;
+            text-align: center;
+            color: #a2c1df;
+            margin: 1.5rem 0 1rem;
+        }
+
+        .empty-state p {
+            font-size: 1.3rem;
+            font-weight: 400;
+        }
+
+        .empty-state small {
+            opacity: 0.7;
+        }
+
+        /* sidebar contact card (dark, subtle glow) */
+        .contact-side {
+            margin-top: 2.5rem;
+            background: #0f1a23;
+            border-radius: 28px;
+            padding: 1.8rem 1.5rem;
+            border: 1px solid #2e4153;
+            box-shadow: inset 0 1px 3px rgba(0,0,0,0.8), 0 5px 10px black;
+        }
+
+        .contact-side h3 {
+            font-weight: 600;
+            margin-bottom: 1.2rem;
+            font-size: 1.4rem;
+            border-left: 4px solid #3070a5;
+            padding-left: 1.2rem;
+            color: #d1e5fc;
+        }
+
+        .side-contact-item {
+            display: flex;
+            align-items: center;
+            gap: 0.9rem;
+            margin: 1.2rem 0;
+            word-break: break-all;
+        }
+
+        .side-contact-item span:first-child {
+            font-weight: 500;
+            min-width: 45px;
+            color: #90b5d6;
+        }
+
+        .side-contact-item a, .side-contact-item .plain {
+            color: #e3efff;
+            text-decoration: none;
+        }
+
+        .side-contact-item a:hover {
+            text-decoration: underline;
+            color: #b3d6ff;
+        }
+
+        .github-link {
+            background: #1e3343;
+            color: #e1efff !important;
+            padding: 0.3rem 1.2rem;
+            border-radius: 40px;
+            display: inline-block;
+            margin-top: 0.4rem;
+            font-size: 0.95rem;
+            border: 1px solid #3b607c;
+        }
+
+        .github-link:hover {
+            background: #274b62;
+            text-decoration: none !important;
+        }
+
+        hr {
+            border: none;
+            border-top: 2px solid #293b48;
+            margin: 2rem 0;
+        }
+
+        /* skill chips (dark mode) */
+        .skill-chip {
+            background: #1f2f3d;
+            padding: 0.5rem 1.5rem;
+            border-radius: 40px;
+            font-weight: 500;
+            border: 1px solid #38536b;
+            color: #cde1f3;
+            box-shadow: 0 2px 5px black;
+        }
+
+        /* github block */
+        .github-block {
+            margin: 2rem 0 1rem;
+            background: #17222d;
+            border-radius: 18px;
+            padding: 1.3rem 1.8rem;
+            border: 1px solid #385067;
+        }
+
+        .github-block a {
+            color: #aad0ff;
+            font-weight: 500;
+            text-decoration: none;
+            border-bottom: 1px dotted;
+        }
+
+        .github-block a:hover {
+            color: white;
+        }
+
+        /* footer dark */
+        .footer-note {
+            background: #0f151c;
+            padding: 1.3rem 2.5rem;
+            text-align: center;
+            color: #8ba5c0;
+            border-top: 1px solid #25333f;
+            font-size: 1rem;
+            letter-spacing: 0.2px;
+        }
+
+        /* responsive */
+        @media (max-width: 700px) {
+            .header {
+                padding: 2rem 1.5rem;
+            }
+            .name-title h1 {
+                font-size: 2.5rem;
+            }
+            .contact-badge {
+                flex-direction: column;
+                gap: 0.7rem;
+                width: 100%;
+            }
+            .columns {
+                flex-direction: column;
+            }
+            .sidebar {
+                border-right: none;
+                border-bottom: 1px solid #2a3a46;
+            }
+            .main-content {
+                padding: 2rem 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="portfolio-card">
+        <!-- HEADER: professional dark gradient -->
+        <div class="header">
+            <div class="name-title">
+                <h1>Umesh Laxman Ambekar</h1>
+                <div class="badge">first year · diploma · fresher</div>
+            </div>
+
+            <div class="header-row">
+                <div class="institution">
+                    <span>current institute</span>
+                    <span>AISSMS Polytechnic, Pune</span>
+                </div>
+                <!-- compact contact strip (professional) -->
+                <div class="contact-badge">
+                    <div class="contact-item"><i>📞</i> <a href="tel:+9270449817">9270449817</a></div>
+                    <div class="contact-item"><i>✉️</i> <a href="mailto:umeshambekar25@gmail.com">umesh29</a></div>
+                    <div class="contact-item"><i>💬</i> <span>WhatsApp 9270449817</span></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- MAIN LAYOUT: SIDEBAR + CONTENT (dark background) -->
+        <div class="columns">
+            <!-- SIDEBAR (darker) with personal info -->
+            <div class="sidebar">
+                <div class="fresher-ribbon"> fresher · open to opportunities</div>
+               
+                <ul class="info-list">
+                    <li><strong>10th</strong> <span>completed (Maharashtra board)</span></li>
+                    <li><strong>diploma</strong> <span>1st year, AISSMS Pune</span></li>
+                    <li><strong>fresher</strong> <span>no prior projects</span></li>
+                </ul>
+
+                <!-- CONTACT SIDEBAR (elevated) -->
+                <div class="contact-side">
+                    <h3> contact & profiles</h3>
+                   
+                    <div class="side-contact-item">
+                        <span></span>
+                        <a href="mailto:umeshambekar25@gmail.com">umeshambekar25@gmail.com</a>
+                    </div>
+                    <div class="side-contact-item">
+                        <span>📞</span>
+                        <a href="tel:+918605459115">+91 9270449817</a>
+                    </div>
+                    <div class="side-contact-item">
+                        <span>💬</span>
+                        <span class="plain">WhatsApp: 9270449817</span>
+                    </div>
+                    <div class="side-contact-item">
+                        <span></span>
+                        <a href="https://github.com/umeshambekar" target="_blank" class="github-link">github.com/umeshambekar</a>
+                    </div>
+                
+
+                            <!-- MAIN CONTENT (professional dark) -->
+            <div class="main-content">
+                <!-- short intro / summary (no light background) -->
+                <div style="margin-bottom: 2.2rem;">
+                    <h2 style="font-size: 2rem; font-weight: 500; color: #e0edfb;">umesh ambekar</h2>
+                    <p style="font-size: 1.2rem; margin-top: 0.6rem; color: #bbd3ed; border-left: 3px solid #2a6285; padding-left: 1.2rem;">
+                        First-year diploma student at AISSMS polytechnic, Pune. Completed 10th standard
+                        and currently building a foundation in engineering. No professional projects yet —
+                        but ready to learn and contribute.
+                    </p>
+                </div>
+
+                <!-- EDUCATION SECTION -->
+                <div class="section-title">education</div>
+                <div class="edu-card">
+                    <h3>🎓 Diploma in engineering (first year)</h3>
+                    <div class="college">AISSMS Polytechnic, Pune</div>
+                    <div class="year">2025 · pursuing</div>
+                    <p style="margin-top: 1.2rem; color: #b8d3ec;">
+                        <span style="color: #d3e7ff; font-weight: 500;">10th standard:</span> completed with overall record.
+                        Currently focused on core subjects and skill development.
+                    </p>
+                </div>
+
+                <!-- PROJECTS (fresher empty state) -->
+                <div class="section-title">projects</div>
+                <div class="empty-state">
+                    <p style="font-size: 2rem; margin-bottom: 0.2rem;"></p>
+                    <p><strong>no projects yet</strong> — fresher in first year</p>
+                    <small>repositories will appear here as i progress</small>
+                </div>
+
+                <!-- SKILLS (exploring) -->
+                <div class="section-title">currently exploring</div>
+                <div style="display: flex; flex-wrap: wrap; gap: 0.8rem; margin: 1.2rem 0 1.8rem;">
+                    <span class="skill-chip">HTML & CSS</span>
+                    <span class="skill-chip">C programming basics</span>
+                    <span class="skill-chip">engineering drawing</span>
+                    <span class="skill-chip">problem solving</span>
+                </div>
+
+                <!-- GITHUB consistency block -->
+                <div class="github-block">
+                    <span style="font-weight: 600; color: #d6eaff;"> github:</span>
+                    <a href="https://github.com/Umesh ambekar" target="_blank">umeshambekar</a>
+                    — no public repos yet (fresh start), but active learning.
+                </div>
+
+                <!-- contact consistency note -->
+                <p style="color: #b0cde8; border-left: 4px solid #2e6c9e; padding-left: 1.2rem; margin-top: 2rem;">
+                    <strong> 📞one number for WhatsApp:</strong> 9270449817
+                </p>
+            </div>
+        </div>
+
+        <!-- FOOTER (dark, subtle) -->
+        <div class="footer-note">
+                   </div>
+    </div>
+   </body>
+</html>
